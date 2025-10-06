@@ -1,17 +1,16 @@
-import { BrowserRouter, Routes, Route } from "react-router";
+import { Routes, Route } from "react-router";
 import { Dashboard } from "./features/Dashboard";
-
-
-import './App.css'
-
+import { Layout } from "./components/Layout";
 
 function App() {
 
   return (
     <>
-      <div>
-       test
-      </div>
+      <Layout>
+        <Routes>
+          <Route path="/" index element={<Dashboard />} />
+        </Routes>
+      </Layout>
     </>
   )
 }
